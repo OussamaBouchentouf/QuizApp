@@ -3,7 +3,7 @@
 export const quizRequest = () => {
   var mocksIndex;
   return new Promise((resolve, reject) => {
-    fetch("http://192.168.1.10:1900/quizs")
+    fetch("http://192.168.1.18:1900/quizs")
       .then((res) => res.json())
       .then((res) => {
         mocksIndex = res;

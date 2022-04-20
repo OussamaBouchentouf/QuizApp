@@ -3,7 +3,7 @@ const app = express();
 const PORT = 1900;
 
 // Put the api in the serve with the specific url
-app.listen(PORT, () => console.log("The api link http://192.168.1.10:" + PORT));
+app.listen(PORT, () => console.log("The api link http://192.168.1.9:" + PORT));
 
 // Go through this express json middleware every request that comes in wich will convert the body to json
 app.use(json());
@@ -28,7 +28,7 @@ app.post("/quizs/:id", (req, res) => {
 
 // A new endpoint that allows us to get all the data from the api if we navigate to the specific url
 //Client = send request by naviagting to the url   =>   Server = send data as object with the respense
-app.get("/quizs", (req, res) => {
+app.get("/quizs", (_, res) => {
   res.status(200).send({
     quizs: [
       {
